@@ -28,6 +28,7 @@ const renderPlace = $("#render-place");
 const renderArrange = $("#render-arrange");
 const renderPrime = $("#render-prime");
 const renderInteger = $("#render-integer");
+const renderNoInteger = $("#render-no-integer");
 
 const renderSs = $("#render-ss");
 const posNumb = $("#positive-numb");
@@ -35,10 +36,6 @@ const negNumb = $("#negative-numb");
 
 const renderShowPrime = $("#render-show-prime");
 
-// const renderCount = $("#render-count");
-// const renderSumEven = $("#render-sum-event");
-// const renderNumber = $("#render-numb");
-// const renderXs = $("#render-xs");
 const numberList = [];
 let result = 0;
 
@@ -196,16 +193,20 @@ btnXs.addEventListener("click", () => {
 
 // Integer
 btnInteger.addEventListener("click", () => {
-  let count = 0;
+  let countIn = 0;
+  let countNoIn = 0;
 
   for (let i = 0; i < numberList.length; i++) {
     let item = numberList[i];
 
-    if (Math.ceil(item) != Math.floor(item)) {
-      count++;
+    if (Math.ceil(item) === Math.floor(item)) {
+      countIn++;
+    } else {
+      countNoIn++
     }
   }
-  renderInteger.innerHTML = count;
+  renderInteger.innerHTML = countIn;
+  renderNoInteger.innerHTML = countNoIn;
 });
 
 // Compare
