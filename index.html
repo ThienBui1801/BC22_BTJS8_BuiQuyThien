@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Bài 1 -->
+  <div class="container py-5">
+    <div class="card">
+      <div class="card-header">Tổng các số dương</div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="">Nhập các số</label>
+          <input type="text" class="form-control" id="numb-value" placeholder="Nhập số">
+        </div>
+      </div>
+
+      <!-- Show array -->
+      <div class="card-footer text-muted">
+        <p>
+          Mảng gồm:
+          <span id="render-arr"></span>
+        </p>
+      </div>
+
+      <!-- Calculate sum positive number -->
+      <div class="card-footer text-muted">
+        <p>
+          Tổng các số dương:
+          <span id="render-sum-positive"></span>
+        </p>
+      </div>
+
+      <!-- Count positive number -->
+      <div class="card-footer text-muted">
+        <p>
+          Mảng có <span id="render-positive-number"></span> số dương
+        </p>
+      </div>
+
+      <!-- Find min number -->
+      <div class="card-footer text-muted">
+        <p>
+          Số nhỏ nhất trong mảng:
+          <span id="render-min-number"></span>
+        </p>
+      </div>
+
+      <!-- Find min positive number -->
+      <div id="render-numb" class="card-footer text-muted">
+        <p>
+          Số dương nhỏ nhất trong mảng:
+          <span id="render-min-positive"></span>
+        </p>
+      </div>
+
+      <!-- Find last even number -->
+      <div class="card-footer text-muted">
+        <p>
+          Số chẵn cuối cùng trong mảng:
+          <span id="render-even-last"></span>
+        </p>
+        <p>Nếu mảng không có giá trị chẵn thì trả về -1.</p>
+      </div>
+
+      <!-- Change place -->
+      <div class="card-footer text-muted">
+        <p>
+          Đổi vị trí:
+          <span id="render-place"></span>
+        </p>
+      </div>
+
+      <!-- Arrange -->
+      <div class="card-footer text-muted">
+        <p>
+          Mảng theo thứ tự tăng dần:
+          <span id="render-arrange"></span>
+        </p>
+      </div>
+
+      <!-- First prime number -->
+      <div class="card-footer text-muted">
+        <p>
+          Số nguyên tố đầu tiên:
+          <span id="render-prime"></span>
+        </p>
+        <p>Nếu mảng không có số nguyên tố thì trả về –1.</p>
+      </div>
+
+      <!-- Find integer -->
+      <div class="card-footer text-muted">
+        <p>
+          Mảng gồm có <span id="render-integer"></span> số nguyên
+        </p>
+      </div>
+
+      <!-- SS -->
+      <div class="card-footer text-muted">
+        <p>Mảng gồm:</p>
+        <p>Số dương: <span id="positive-numb"></span></p>
+        <p>Số âm: <span id="negative-numb"></span></p>
+        <p id="render-ss"></p>
+      </div>
+
+      <!-- Prime -->
+      <div class="card-footer text-muted">
+        <p>
+          Các số nguyên tố:
+          <span id="render-show-prime"></span>
+        </p>
+      </div>
+
+    </div>
+    <button id="btn-numb" class="btn btn-primary my-3">Thêm số</button>
+    <button id="btn-show" class="btn btn-success my-3">Hiện mảng</button>
+    <button id="btn-calc" class="btn btn-dark my-3">Tính tổng</button>
+    <button id="btn-count-positive" class="btn btn-danger my-3">Đếm số dương</button>
+    <button id="btn-min" class="btn btn-warning my-3">Số nhỏ nhất</button>
+    <button id="btn-even" class="btn btn-secondary my-3">Số chẵn nhỏ nhất</button>
+    <button id="btn-even-last" class="btn btn-info my-3">Số chẵn cuối cùng</button>
+    <button id="btn-place" class="btn btn-warning my-3">Đổi chỗ</button>
+    <button id="btn-prime" class="btn btn-danger my-3">Số nguyên tố đầu tiên</button>
+    <button id="btn-xs" class="btn btn-light my-3">Sắp xếp</button>
+    <button id="btn-integer" class="btn btn-secondary my-3">Số nguyên</button>
+    <button id="btn-ss" class="btn btn-success my-3">So sánh</button>
+    <button id="btn-show-prime" class="btn btn-warning my-3">Số nguyên tố</button>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
